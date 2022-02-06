@@ -5,12 +5,12 @@ The idea behind this script is to automate the setup and configuration of an ope
 As an extra added bonus it will download and install acme.sh which you can use to create and auto-renew free SSL certificates. 
 
 This script is basically an amalgamation of the following installation guides:
-- OpenResrty https://openresty.org/en/installation.html
+- OpenResty https://openresty.org/en/installation.html
 - ModSecurity WAF https://www.linode.com/docs/guides/securing-nginx-with-modsecurity/
 - GeoIP2 https://github.com/leev/ngx_http_geoip2_module
 - ACME https://github.com/acmesh-official/acme.sh#2-or-install-from-git
 
-To run this script simply copy `install_openresty.sh` to your home directory and run it. You will require sudo right but you  
+To run this script simply copy `install_openresty.sh` to your home directory and run it. You will require sudo rights but you should run the script without sudo. 
 
 At the bottom of the script you will find the acme installation command where you may want to add your email address for notifications but it is not required.
 
