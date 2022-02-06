@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GeoIP2 Test Page</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+<script type="text/javascript">
+
+    function readCookie(name) {
+        return (name = new RegExp('(?:^|;\\s*)' + ('' + name).replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&') + '=([^;]*)').exec(document.cookie)) && name[1];
+    }
+
+    window.onload = function() {        
+        var contient_code = readCookie('continent_code');
+        var country_code = readCookie('country_code');
+
+        document.getElementById('continentCodeLabel').innerText = contient_code;
+        document.getElementById('countryCodeLabel').innerText = country_code;
+    }
+    
+</script>
+</head>
+<body>
+<h1>GeoIP2 Test Page</h1>
+<h3>IP Address: %IP%</h2>
+<br>
+<p>Country Code: <b id="countryCodeLabel"></b></p>
+<p>Continent Code: <b id="continentCodeLabel"></b></p>
+<br>
+<p>City: <b>%city%</b></p>
+<p>State/Province: <b>%state%</b></p>
+<p>Zip/Post Code: <b>%zip%</b></p>
+<br>
+<p>Latitude: <b>%latitude%</b></p>
+<p>Longitude: <b>%longitude%</b></p>
+
+</body>
+</html>
